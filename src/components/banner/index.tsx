@@ -12,7 +12,7 @@ const Banner = () => {
           <Trinket key={idx} {...trinket} />
         ))}
       </TrinketsContainer>
-      <BannerHeading>Pesto's Paradise</BannerHeading>
+      <BannerHeading>Pesto&apos;s Paradise</BannerHeading>
     </BannerContainer>
   );
 };

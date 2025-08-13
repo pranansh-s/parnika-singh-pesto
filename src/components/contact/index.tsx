@@ -68,7 +68,7 @@ const Contact = () => {
         />
       </GraphicContainer>
       <Connect>
-        <ConnectTitle>Let's Connect</ConnectTitle>
+        <ConnectTitle>Let&apos;s Connect</ConnectTitle>
         <BackgroundImage src={papers} alt="papers" />
         <ContactFields>
           <ContactField

@@ -7,13 +7,16 @@ import WorkDetail from '@/components/work/WorkDetail';
 
 import { WORK_PAGES } from '@/constants/work-content';
 
+type WorkPageParams = Promise<{ workId: string }>;
+
 export async function generateStaticParams() {
   return WORK_PAGES.map(page => ({ workId: page.id }));
 }
 
-export default async function WorkPage({ params }: { params: { workId: string } }) {
-  const { workId } = await params;
+export default async function WorkPage(props: { params: WorkPageParams }) {
+  const { workId } = await props.params;
   const pageContent = WORK_PAGES.find(content => content.id === workId);
+
   if (!pageContent) return redirect('/');
 
   return (

@@ -1,26 +1,38 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-primary: #ffffff;
+  --color-secondary: #171717;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --spacing-lg: 15px;
+  --spacing-md: 10px;
+  --spacing-sm: 5px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @theme {
+    --color-primary: #111213;
+    --color-secondary: #ededed;
   }
 }
 
+.react-tweet-theme {
+  max-width: none !important;
+}
+
+b,
+strong {
+  color: #51a2ff;
+}
+
+*,
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-primary);
+  color: var(--color-secondary);
 }

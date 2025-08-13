@@ -10,7 +10,7 @@
     "prettier-plugin-tailwindcss",
     "prettier-plugin-tailwind-styled-components"
   ],
-  "tailwindFunctions": ["clsx", "cn", "tw"],
+  "tailwindFunctions": ["tw"],
   "importOrder": [
     "^(react/(.*)$)|^(react$)",
     "^(next/(.*)$)|^(next$)",
@@ -19,11 +19,11 @@
     "",
     "^@/components/(.*)$",
     "",
-    "^@/lib/(.*)$",
     "^@/hooks/(.*)$",
-    "^@/redux/(.*)$",
-    "^@/schema/(.*)$",
+    "^@/lib/(.*)$",
+    "",
     "^@/constants/(.*)$",
+    "<TYPES>",
     "",
     "^.*[.]png$|^.*[.]jpg$|^.*[.]jpeg$|^.*[.]gif$|^.*[.]svg$|^.*[.]webp$|^.*[.]json$|^.*[.]txt$|^.*[.]md$|^.*[.]eot$|^.*[.]ttf$|^.*[.]woff$|^.*[.]woff2$",
     "^(?!.*[.]css$)[./].*$",

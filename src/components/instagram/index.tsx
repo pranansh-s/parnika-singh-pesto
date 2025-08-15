@@ -45,7 +45,7 @@ const InstagramCarousel = () => {
           <Embed style={{ width: (carouselRef.current ? carouselRef.current.offsetWidth : 0) / itemsPerView }} key={idx} url={postUrl} />
         ))}
         <ViewMore href="https://www.instagram.com/pestomessto" target='_blank'>
-          <span style={{ writingMode: 'vertical-rl' }} className='text-shadow-lg'>Read More</span>
+          <span style={{ writingMode: 'vertical-rl' }} className='text-shadow-lg mr-16 md:mr-24'>Read More</span>
         </ViewMore>
       </Slider>
       <Controls>
@@ -89,12 +89,10 @@ const ViewMore = tw(Link)`
   from-secondary
   h-screen
   md:min-w-[250px]
-  min-w-[200px]
-  align-middle
+  min-w-[150px]
   -translate-x-full
-  cursor-pointer
   flex
-  justify-center
+  justify-end
   items-center
   bg-gradient-to-l
   to-transparent
@@ -113,6 +111,7 @@ const Embed = tw(InstagramEmbed)`
 
 const Slider = tw(motion.div)`
   flex
+  overflow-y-clip
   will-change-transform
 `;
 

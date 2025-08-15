@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { TrinketItem } from '@/types';
@@ -11,11 +11,24 @@ type ITrinketProps = TrinketItem & {
   key?: number;
 };
 
-const Trinket: React.FC<ITrinketProps> = ({ image, defaultTop, defaultLeft, size, rotate, key }) => {
+const Trinket: React.FC<ITrinketProps> = ({ image, defaultTop, defaultLeft, size, rotate, mobile, key }) => {
   const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [isMobileView, setIsMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    const updateView = () => {
+      const width = window.innerWidth;
+      if(width < 1024) setIsMobileView(true);
+      else setIsMobileView(false);
+    };
+
+    updateView();
+    window.addEventListener('resize', updateView);
+    return () => window.removeEventListener('resize', updateView);
+  }, []);
 
   return (
-    <StyledTrinketImage
+    (!isMobileView || mobile) && <StyledTrinketImage
       drag
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}
@@ -25,7 +38,7 @@ const Trinket: React.FC<ITrinketProps> = ({ image, defaultTop, defaultLeft, size
       width={700}
       height={700}
       priority
-      style={{ scale: size, top: `${defaultTop}%`, left: `${defaultLeft}%`, rotate: `${rotate}deg` }}
+      style={{ scale: size - (isMobileView ? 0.05 : 0), top: `${isMobileView ? defaultTop[1] : defaultTop[0]}%`, left: `${isMobileView ? defaultLeft[1] : defaultLeft[0]}%`, rotate: `${rotate}deg` }}
       alt={`trinket-${key ?? image}`}
     />
   );

@@ -23,15 +23,17 @@ const NavbarContainer = tw.div`
   lg:px-lg
   px-md
   py-md
+  items-center
   bg-primary
   fixed
   top-0
-  left-1/2
+  left-0
   z-50
   flex
-  w-full
+  w-screen
+  xl:left-1/2
+  xl:-translate-x-1/2
   max-w-[2400px]
-  -translate-x-1/2
   justify-between
   gap-6
   md:gap-48

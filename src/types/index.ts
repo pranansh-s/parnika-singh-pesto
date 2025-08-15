@@ -4,8 +4,8 @@ export interface NavLink {
 }
 
 export interface DefaultPosition {
-  defaultTop: number;
-  defaultLeft: number;
+  defaultTop: number[];
+  defaultLeft: number[];
 }
 
 export interface Position {
@@ -15,6 +15,7 @@ export interface Position {
 
 export interface TrinketItem extends DefaultPosition {
   image: string;
+  mobile: boolean;
   rotate: number;
   size: number;
 }

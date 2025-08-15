@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${playfair.variable} lg:p-lg p-md flex w-full flex-col items-center overflow-x-clip antialiased`}
+        className={`${montserrat.variable} ${playfair.variable} lg:p-lg p-md flex w-screen flex-col items-center overflow-x-clip antialiased`}
       >
         <Navbar />
         {children}

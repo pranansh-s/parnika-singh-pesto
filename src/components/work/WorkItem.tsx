@@ -114,7 +114,8 @@ const AboutText = tw.p`
   w-screen
   pr-6
   text-left
-  text-xl
+  lg:text-xl
+  text-lg
   xl:mb-0
   xl:w-full
 `;

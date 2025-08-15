@@ -18,7 +18,7 @@ const Trinket: React.FC<ITrinketProps> = ({ image, defaultTop, defaultLeft, size
   useEffect(() => {
     const updateView = () => {
       const width = window.innerWidth;
-      if(width < 1024) setIsMobileView(true);
+      if(width < 768) setIsMobileView(true);
       else setIsMobileView(false);
     };
 
@@ -51,6 +51,9 @@ const StyledTrinketImage = tw(motion.create(Image))<{ $isDragging: boolean }>`
   select-none
   touch-none
   cursor-grab
+  aspect-auto
+  2xl:w-[650px]
+  w-[500px]
   will-change-transform
   ${({ $isDragging }) => ($isDragging ? 'cursor-grabbing z-[100]' : 'cursor-grab')}
   -translate-x-1/2

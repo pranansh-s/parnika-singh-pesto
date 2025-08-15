@@ -1,7 +1,8 @@
-'use client'
+'use client';
+
+import Link from 'next/link';
 
 import { NAV_LINKS } from '@/constants';
-import Link from 'next/link';
 import tw from 'tailwind-styled-components';
 
 const Navbar = () => {
@@ -10,7 +11,9 @@ const Navbar = () => {
       <NameTag>Parnika</NameTag>
       <NavItemContainer>
         {NAV_LINKS.map((link, idx) => (
-          <NavItem href={link.path} key={idx}>{link.name}</NavItem>
+          <NavItem href={link.path} key={idx}>
+            {link.name}
+          </NavItem>
         ))}
       </NavItemContainer>
     </NavbarContainer>
@@ -23,7 +26,6 @@ const NavbarContainer = tw.div`
   lg:px-lg
   px-md
   py-md
-  items-center
   bg-primary
   fixed
   top-0
@@ -31,12 +33,13 @@ const NavbarContainer = tw.div`
   z-50
   flex
   w-screen
-  xl:left-1/2
-  xl:-translate-x-1/2
   max-w-[2400px]
+  items-center
   justify-between
   gap-6
   md:gap-48
+  xl:left-1/2
+  xl:-translate-x-1/2
 `;
 
 const NavItemContainer = tw.ul`

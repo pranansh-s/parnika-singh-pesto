@@ -124,7 +124,6 @@ export const WORK_PAGES: WorkContent[] = [
       '/posters/campaign-strategy/hudl-testnet-nexus/image-19.webp',
       '/posters/campaign-strategy/hudl-testnet-nexus/image-4.webp',
       '/posters/campaign-strategy/hudl-testnet-nexus/image-5.webp',
-      '1910329685143126162',
       '/posters/campaign-strategy/hudl-testnet-nexus/image-6.webp',
       '/posters/campaign-strategy/hudl-testnet-nexus/image-7.webp',
       '/posters/campaign-strategy/hudl-testnet-nexus/image-8.webp',

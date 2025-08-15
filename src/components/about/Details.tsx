@@ -16,7 +16,14 @@ const Details = () => {
         Pesto aka <b>Parnika</b>, is a brand strategist, creative tinkerer and copywriter based out of Bombay with over
         8 years of experience in advertising & marketing across fashion, lifestyle and crypto brands.
       </Content>
-      <Trinket image={'/trinkets/trinket-12.webp'} rotate={-20} size={0.3} mobile={true} defaultTop={[10, 5]} defaultLeft={[5, 10]} />
+      <Trinket
+        image={'/trinkets/trinket-12.webp'}
+        rotate={-20}
+        size={0.3}
+        mobile={true}
+        defaultTop={[10, 5]}
+        defaultLeft={[5, 10]}
+      />
     </DetailsContainer>
   );
 };

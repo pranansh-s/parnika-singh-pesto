@@ -20,8 +20,8 @@ export default About;
 const AboutContainer = tw.section`
   mb-36
   flex
-  flex-col
   w-full
+  flex-col
   items-center
   space-y-32
 `;

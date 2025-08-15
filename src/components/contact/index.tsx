@@ -71,7 +71,7 @@ const Contact = () => {
         <BackgroundImage src={papers} alt="papers" />
         <ContactFields>
           <ContactField text="parnikasingh12@gmail.com" link="mailto:parnikasingh12@gmail.com" icon={mail} />
-          <ContactField text="@parnika97" link="" icon={telegram} />
+          <ContactField text="@parnika97" link="https://t.me/parnika97" icon={telegram} />
           <ContactField
             text="@pesto_panini_"
             link="https://x.com/pesto_panini_?t=WbAgp57PwCsSexn-c0u8Nw&s=09"

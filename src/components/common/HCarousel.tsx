@@ -84,8 +84,8 @@ const CarouselItem = tw.pre`
 `;
 
 const CarouselImage = tw(Image)`
-  w-full
+  w-auto
   md:h-[100px]
   h-[75px]
-  mx-14
+  mx-12
 `;

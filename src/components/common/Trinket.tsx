@@ -18,7 +18,7 @@ const Trinket: React.FC<ITrinketProps> = ({ image, defaultTop, defaultLeft, size
   useEffect(() => {
     const updateView = () => {
       const width = window.innerWidth;
-      if(width < 768) setIsMobileView(true);
+      if (width < 768) setIsMobileView(true);
       else setIsMobileView(false);
     };
 
@@ -28,19 +28,26 @@ const Trinket: React.FC<ITrinketProps> = ({ image, defaultTop, defaultLeft, size
   }, []);
 
   return (
-    (!isMobileView || mobile) && <StyledTrinketImage
-      drag
-      dragMomentum={false}
-      onDragStart={() => setIsDragging(true)}
-      onDragEnd={() => setIsDragging(false)}
-      $isDragging={isDragging}
-      src={image}
-      width={700}
-      height={700}
-      priority
-      style={{ scale: size - (isMobileView ? 0.05 : 0), top: `${isMobileView ? defaultTop[1] : defaultTop[0]}%`, left: `${isMobileView ? defaultLeft[1] : defaultLeft[0]}%`, rotate: `${rotate}deg` }}
-      alt={`trinket-${key ?? image}`}
-    />
+    (!isMobileView || mobile) && (
+      <StyledTrinketImage
+        drag
+        dragMomentum={false}
+        onDragStart={() => setIsDragging(true)}
+        onDragEnd={() => setIsDragging(false)}
+        $isDragging={isDragging}
+        src={image}
+        width={400}
+        height={400}
+        priority
+        style={{
+          scale: size - (isMobileView ? 0.05 : 0),
+          top: `${isMobileView ? defaultTop[1] : defaultTop[0]}%`,
+          left: `${isMobileView ? defaultLeft[1] : defaultLeft[0]}%`,
+          rotate: `${rotate}deg`,
+        }}
+        alt={`trinket-${key ?? image}`}
+      />
+    )
   );
 };
 

@@ -71,12 +71,12 @@ const Header = tw.header`
 
 const WorkHeading = tw.h3`
   py-sm
+  xl:col-span-1
+  col-span-full
   text-2xl
   font-bold
   tracking-[0.5rem]
-  text-nowrap
   uppercase
-  xl:text-wrap
 `;
 
 const Divider = tw.hr`
@@ -109,14 +109,14 @@ const Poster = tw(Image)`
 
 const AboutText = tw.p`
   text-secondary/80
+  xl:col-span-1
+  col-span-full
   mb-10
-  w-full
   pr-6
   text-left
-  lg:text-xl
   text-lg
+  lg:text-xl
   xl:mb-0
-  xl:w-full
 `;
 
 const Experience = tw(Link)`

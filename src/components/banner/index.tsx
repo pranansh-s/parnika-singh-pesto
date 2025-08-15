@@ -23,18 +23,18 @@ const Banner = () => {
 export default Banner;
 
 const BannerContainer = tw.section`
-  h-screen
+  max-h-screen
+  h-[500px]
+  sm:h-[750px]
+  md:h-[1024px]
+  lg:h-[750px]
+  max-w-[2400px]
+  relative
   w-full
 `;
 
 const TrinketsContainer = tw.div`
-  relative
-  top-1/2
-  h-[750px]
-  -translate-y-[52.5%]
-  sm:-translate-y-1/2
-  md:h-[1024px]
-  lg:h-[700px]
+  h-full
 `;
 
 const BannerHeading = tw.h1`

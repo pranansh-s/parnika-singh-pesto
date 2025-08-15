@@ -23,8 +23,8 @@ export default function HomePage() {
 const HomeContainer = tw.div`
   flex
   w-full
-  max-w-[2400px]
   flex-col
   items-center
-  gap-36
+  lg:gap-36
+  gap-24
 `;

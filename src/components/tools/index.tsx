@@ -11,7 +11,7 @@ const Tools = () => {
   return (
     <ToolsContainer id="tools">
       <Title initial={{ scale: 0.75 }} whileInView={{ scale: 1 }} viewport={{ once: true }}>
-        Tools I Love ❤️
+        Tools I ❤️
       </Title>
       <HCarousel type="image" items={TOOLS_TAGS} />
     </ToolsContainer>
@@ -21,28 +21,22 @@ const Tools = () => {
 export default Tools;
 
 const Title = tw(motion.h2)`
-  absolute
-  xl:tracking-[3rem]
-  lg:tracking-wider
-  tracking-normal
-  left-1/2
-  translate-y-1/2
-  sm:translate-y-0
-  -translate-x-1/2
   font-mono
+  mx-auto
   text-6xl
-  sm:text-8xl
+  lg:text-7xl
   font-bold
   uppercase
   md:text-left
-  md:text-9xl
   whitespace-nowrap
-  text-white/60
+  text-secondary
 `;
 
 const ToolsContainer = tw.section`
   flex
+  items-center
   w-full
   flex-col
-  gap-24
+  gap-16
+  mb-48
 `;

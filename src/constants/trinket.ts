@@ -43,7 +43,7 @@ export const BANNER_TRINKETS: TrinketItem[] = [
   },
   {
     image: '/trinkets/trinket-5.webp',
-    defaultTop: [21, 32.5],
+    defaultTop: [24, 32.5],
     defaultLeft: [47.5, 50],
     size: 0.3,
     rotate: 0,
@@ -99,8 +99,8 @@ export const BANNER_TRINKETS: TrinketItem[] = [
   },
   {
     image: '/trinkets/trinket-15.webp',
-    defaultTop: [20, 0],
-    defaultLeft: [33.5, 0],
+    defaultTop: [22, 0],
+    defaultLeft: [35, 0],
     size: 0.225,
     rotate: 10,
     mobile: false,

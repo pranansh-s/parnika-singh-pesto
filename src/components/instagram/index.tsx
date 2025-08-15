@@ -79,6 +79,8 @@ export default InstagramCarousel;
 const CarouselContainer = tw.div`
   relative
   w-screen
+  max-w-[2400px]
+  overflow-clip
   space-y-12
   md:w-full
 `;

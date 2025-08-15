@@ -23,5 +23,6 @@ const AboutContainer = tw.section`
   w-full
   flex-col
   items-center
-  space-y-32
+  lg:gap-32
+  gap-24
 `;

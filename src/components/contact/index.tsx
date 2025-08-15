@@ -87,7 +87,9 @@ export default Contact;
 
 const ContactContainer = tw.section`
   grid
-  h-screen
+  max-h-screen
+  md:h-[500px]
+  h-[400px]
   max-w-[1000px]
   grid-cols-1
   place-items-center

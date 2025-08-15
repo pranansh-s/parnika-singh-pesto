@@ -77,7 +77,8 @@ const CarouselItem = tw.pre`
   text-primary
   py-3
   font-sans
-  text-3xl
+  text-xl
+  md:text-3xl
   font-semibold
   uppercase
   lg:text-4xl
@@ -86,6 +87,8 @@ const CarouselItem = tw.pre`
 const CarouselImage = tw(Image)`
   w-auto
   md:h-[100px]
-  h-[75px]
-  mx-12
+  sm:h-[75px]
+  h-[50px]
+  md:mx-12
+  mx-8
 `;

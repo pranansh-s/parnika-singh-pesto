@@ -20,4 +20,5 @@ const WorkContainer = tw.section`
   flex
   flex-col
   gap-[10rem]
+  max-w-[2400px]
 `;

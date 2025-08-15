@@ -97,7 +97,6 @@ const PosterContainer = tw.div`
 
 const ExperiencePosters = tw.div`
   flex
-  flex-wrap
 `;
 
 const Poster = tw(Image)`
@@ -111,7 +110,7 @@ const Poster = tw(Image)`
 const AboutText = tw.p`
   text-secondary/80
   mb-10
-  w-screen
+  w-full
   pr-6
   text-left
   lg:text-xl

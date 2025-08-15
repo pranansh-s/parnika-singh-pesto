@@ -21,6 +21,7 @@ const AboutContainer = tw.section`
   mb-36
   flex
   flex-col
+  w-full
   items-center
   space-y-32
 `;

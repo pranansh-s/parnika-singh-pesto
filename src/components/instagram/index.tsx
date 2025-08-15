@@ -69,7 +69,6 @@ export default InstagramCarousel;
 
 const CarouselContainer = tw.div`
   relative
-  max-h-screen
   w-screen
   space-y-12
   overflow-clip
@@ -88,6 +87,7 @@ const Title = tw.h2`
 const ViewMore = tw(Link)`
   from-secondary
   h-screen
+  max-h-[740px]
   md:min-w-[250px]
   min-w-[150px]
   -translate-x-full

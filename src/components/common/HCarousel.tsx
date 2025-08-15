@@ -60,7 +60,7 @@ export default HCarousel;
 
 const CarouselContainer = tw.div`
   relative
-  w-screen
+  w-full
   max-w-[2400px]
   overflow-x-clip
 `;

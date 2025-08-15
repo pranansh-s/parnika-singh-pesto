@@ -29,7 +29,11 @@ const BannerContainer = tw.section`
 
 const TrinketsContainer = tw.div`
   relative
-  h-full
+  top-1/2
+  -translate-y-1/2
+  lg:h-[700px]
+  md:h-[1024px]
+  h-[750px]
 `;
 
 const BannerHeading = tw.h1`

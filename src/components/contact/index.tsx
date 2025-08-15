@@ -53,7 +53,7 @@ const Contact = () => {
   });
 
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <GraphicContainer>
         <Image width={400} height={400} src={mailbox} alt="mailbox" />
         <RotatingImage
@@ -67,7 +67,7 @@ const Contact = () => {
       </GraphicContainer>
       <Connect>
         <ConnectTitle>Hire Me</ConnectTitle>
-        <ConnectSubTitle>Let's Connect</ConnectSubTitle>
+        <ConnectSubTitle>Let&apos;s Connect</ConnectSubTitle>
         <BackgroundImage src={papers} alt="papers" />
         <ContactFields>
           <ContactField text="parnikasingh12@gmail.com" link="mailto:parnikasingh12@gmail.com" icon={mail} />

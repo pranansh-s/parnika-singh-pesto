@@ -1,4 +1,7 @@
+'use client'
+
 import { NAV_LINKS } from '@/constants';
+import Link from 'next/link';
 import tw from 'tailwind-styled-components';
 
 const Navbar = () => {
@@ -7,7 +10,7 @@ const Navbar = () => {
       <NameTag>Parnika</NameTag>
       <NavItemContainer>
         {NAV_LINKS.map((link, idx) => (
-          <NavItem key={idx}>{link.name}</NavItem>
+          <NavItem href={link.path} key={idx}>{link.name}</NavItem>
         ))}
       </NavItemContainer>
     </NavbarContainer>
@@ -42,7 +45,7 @@ const NavItemContainer = tw.ul`
   justify-between
 `;
 
-const NavItem = tw.li`
+const NavItem = tw(Link)`
   p-md
   cursor-pointer
   font-sans

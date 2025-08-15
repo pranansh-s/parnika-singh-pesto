@@ -6,7 +6,7 @@ import { WORK_ITEMS } from '@/constants/work-block';
 
 const Work = () => {
   return (
-    <WorkContainer>
+    <WorkContainer id="work">
       {WORK_ITEMS.map((item, idx) => (
         <WorkItem key={idx} {...item} />
       ))}

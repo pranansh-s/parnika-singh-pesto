@@ -7,7 +7,7 @@ import Details from './Details';
 
 const About = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <HCarousel items={JOB_TAGS} />
       <Details />
       <HCarousel items={WORK_TAGS} type="image" dir="right" />

@@ -6,7 +6,7 @@ import Trinket from '../common/Trinket';
 
 const Banner = () => {
   return (
-    <BannerContainer>
+    <BannerContainer id="home">
       <TrinketsContainer>
         {BANNER_TRINKETS.map((trinket, idx) => (
           <Trinket key={idx} {...trinket} />

@@ -9,7 +9,7 @@ import HCarousel from '../common/HCarousel';
 
 const Tools = () => {
   return (
-    <ToolsContainer>
+    <ToolsContainer id="tools">
       <Title initial={{ scale: 0.75 }} whileInView={{ scale: 1 }} viewport={{ once: true }}>
         Tools I Love ❤️
       </Title>
@@ -40,7 +40,7 @@ const Title = tw(motion.h2)`
   text-white/60
 `;
 
-const ToolsContainer = tw.div`
+const ToolsContainer = tw.section`
   flex
   w-full
   flex-col

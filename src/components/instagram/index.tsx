@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { INSTAGRAM_EMBEDS } from '@/constants';
 import { motion } from 'framer-motion';
@@ -11,7 +11,7 @@ import Link from 'next/link';
 const InstagramCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [itemsPerView, setItemsPerView] = useState<number>(4);
-  const itemWidth = window ? window.innerWidth / itemsPerView : 350;
+  const carouselRef = useRef<HTMLDivElement | null>(null);
 
   const nextSlide = () => {
     setCurrentIndex(prevIndex =>
@@ -26,6 +26,7 @@ const InstagramCarousel = () => {
   useEffect(() => {
     const updateItemsPerView = () => {
       const width = window.innerWidth;
+
       if (width < 640) setItemsPerView(1);
       else if (width < 1024) setItemsPerView(2);
       else setItemsPerView(3);
@@ -37,11 +38,11 @@ const InstagramCarousel = () => {
   }, []);
 
   return (
-    <CarouselContainer>
+    <CarouselContainer ref={carouselRef}>
       <Title>Playground</Title>
-      <Slider animate={{ x: -currentIndex * itemWidth * itemsPerView }} transition={{ duration: 0.7 }}>
+      <Slider animate={{ x: -currentIndex * (carouselRef.current ? carouselRef.current.offsetWidth : 0) }} transition={{ duration: 0.7 }}>
         {INSTAGRAM_EMBEDS.map((postUrl, idx) => (
-          <Embed style={{ width: itemWidth }} key={idx} url={postUrl} />
+          <Embed style={{ width: (carouselRef.current ? carouselRef.current.offsetWidth : 0) / itemsPerView }} key={idx} url={postUrl} />
         ))}
         <ViewMore href="https://www.instagram.com/pestomessto" target='_blank'>
           <span style={{ writingMode: 'vertical-rl' }} className='text-shadow-lg'>Read More</span>

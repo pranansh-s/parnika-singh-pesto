@@ -17,10 +17,10 @@ type ICarouselProps = {
 const HCarousel: React.FC<ICarouselProps> = ({ items, type = 'text', dir = 'left' }) => {
   const { baseX, velocityFactor } = useScrollVelocity();
   const directionFactor = useRef<number>(dir === 'left' ? 1 : -1);
-  const x = useTransform(baseX, v => `${wrap(0, -50 + (type === 'image' ? 9.5 : 0), v)}%`);
+  const x = useTransform(baseX, v => `${wrap(0, -50 + (type === 'image' ? -50 : 0), v)}%`);
 
   useAnimationFrame((_, delta) => {
-    let moveBy = directionFactor.current * 1.5 * (delta / 1000);
+    let moveBy = directionFactor.current * 5 * (delta / 1000);
 
     if (velocityFactor.get() < 0) {
       directionFactor.current = dir === 'left' ? -1 : 1;
@@ -77,7 +77,7 @@ const CarouselItem = tw.pre`
   text-primary
   py-3
   font-sans
-  text-xl
+  text-2xl
   md:text-3xl
   font-semibold
   uppercase

@@ -10,9 +10,9 @@ import HCarousel from '../common/HCarousel';
 const Tools = () => {
   return (
     <ToolsContainer id="tools">
-      <Title initial={{ scale: 0.75 }} whileInView={{ scale: 1 }} viewport={{ once: true }}>
+      <motion.h2 initial={{ scale: 0.75 }} whileInView={{ scale: 1 }} viewport={{ once: true }}>
         Tools I ❤️
-      </Title>
+      </motion.h2>
       <HCarousel type="image" items={TOOLS_TAGS} />
     </ToolsContainer>
   );
@@ -20,23 +20,12 @@ const Tools = () => {
 
 export default Tools;
 
-const Title = tw(motion.h2)`
-  font-mono
-  mx-auto
-  text-6xl
-  lg:text-7xl
-  font-bold
-  uppercase
-  md:text-left
-  whitespace-nowrap
-  text-secondary
-`;
-
 const ToolsContainer = tw.section`
   flex
   items-center
   w-full
   flex-col
   gap-16
+  lg:mb-24
   mb-48
 `;

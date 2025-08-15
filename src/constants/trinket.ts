@@ -11,7 +11,7 @@ export const BANNER_TRINKETS: TrinketItem[] = [
   },
   {
     image: '/trinkets/trinket-1.webp',
-    defaultTop: [76, 0],
+    defaultTop: [80, 0],
     defaultLeft: [44, 0],
     size: 0.225,
     rotate: -30,
@@ -19,7 +19,7 @@ export const BANNER_TRINKETS: TrinketItem[] = [
   },
   {
     image: '/trinkets/trinket-2.webp',
-    defaultTop: [75, 0],
+    defaultTop: [79, 0],
     defaultLeft: [48, 0],
     size: 0.225,
     rotate: 0,
@@ -27,7 +27,7 @@ export const BANNER_TRINKETS: TrinketItem[] = [
   },
   {
     image: '/trinkets/trinket-3.webp',
-    defaultTop: [78, 0],
+    defaultTop: [82, 0],
     defaultLeft: [52, 0],
     size: 0.225,
     rotate: 30,
@@ -83,16 +83,16 @@ export const BANNER_TRINKETS: TrinketItem[] = [
   },
   {
     image: '/trinkets/trinket-13.webp',
-    defaultTop: [80, 63],
-    defaultLeft: [65, 51],
+    defaultTop: [80, 67],
+    defaultLeft: [65, 40],
     size: 0.3,
     rotate: 10,
     mobile: true,
   },
   {
     image: '/trinkets/trinket-14.webp',
-    defaultTop: [82, 75],
-    defaultLeft: [31, 45],
+    defaultTop: [82, 70],
+    defaultLeft: [31, 60],
     size: 0.3,
     rotate: 30,
     mobile: true,

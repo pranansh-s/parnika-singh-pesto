@@ -40,7 +40,7 @@ const InstagramCarousel = () => {
 
   return (
     <CarouselContainer ref={carouselRef}>
-      <Title>Playground</Title>
+      <h2 className='mx-auto'>Playground</h2>
       <Slider
         animate={{ x: -currentIndex * (carouselRef.current ? carouselRef.current.offsetWidth : 0) }}
         transition={{ duration: 0.7 }}
@@ -54,7 +54,7 @@ const InstagramCarousel = () => {
         ))}
         <ViewMore href="https://www.instagram.com/pestomessto" target="_blank">
           <span style={{ writingMode: 'vertical-rl' }} className="mr-16 text-shadow-lg md:mr-24">
-            Read More
+            show more
           </span>
         </ViewMore>
       </Slider>
@@ -85,15 +85,6 @@ const CarouselContainer = tw.div`
   md:w-full
 `;
 
-const Title = tw.h2`
-  mx-auto
-  w-max
-  font-mono
-  text-6xl
-  font-bold
-  lg:text-7xl
-`;
-
 const ViewMore = tw(Link)`
   from-secondary
   relative
@@ -107,7 +98,7 @@ const ViewMore = tw(Link)`
   to-transparent
   font-sans
   text-4xl
-  font-black
+  font-bold
   text-black
 `;
 
@@ -120,7 +111,6 @@ const Embed = tw(InstagramEmbed)`
 
 const Slider = tw(motion.div)`
   flex
-  overflow-y-clip
   will-change-transform
 `;
 

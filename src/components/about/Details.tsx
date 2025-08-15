@@ -12,7 +12,7 @@ const Details = () => {
     <DetailsContainer>
       <Image width={400} height={400} src={me} alt="parnika-singh" />
       <Content>
-        <Title>about me</Title>
+        <h2 className='lg:!ml-0 !lowercase text-secondary leading-[8rem]'>about me</h2>
         Pesto aka <b>Parnika</b>, is a brand strategist, creative tinkerer and copywriter based out of Bombay with over
         8 years of experience in advertising & marketing across fashion, lifestyle and crypto brands.
       </Content>
@@ -21,8 +21,8 @@ const Details = () => {
         rotate={-20}
         size={0.3}
         mobile={true}
-        defaultTop={[10, 5]}
-        defaultLeft={[5, 10]}
+        defaultTop={[10, 70]}
+        defaultLeft={[5, 15]}
       />
     </DetailsContainer>
   );
@@ -52,14 +52,4 @@ const Content = tw.div`
   lg:text-left
   lg:text-2xl
   lg:leading-12
-`;
-
-const Title = tw.h2`
-  text-secondary
-  font-mono
-  text-6xl
-  leading-[9rem]
-  font-black
-  lowercase
-  lg:text-7xl
 `;

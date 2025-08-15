@@ -40,7 +40,7 @@ const Trinket: React.FC<ITrinketProps> = ({ image, defaultTop, defaultLeft, size
         height={400}
         priority
         style={{
-          scale: size - (isMobileView ? 0.05 : 0),
+          scale: size - (isMobileView ? 0.05 : -0.05),
           top: `${isMobileView ? defaultTop[1] : defaultTop[0]}%`,
           left: `${isMobileView ? defaultLeft[1] : defaultLeft[0]}%`,
           rotate: `${rotate}deg`,

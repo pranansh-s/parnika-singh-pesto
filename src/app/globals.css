@@ -1,15 +1,8 @@
 @import 'tailwindcss';
 
 :root {
-  --primary: #ffffff;
-  --secondary: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #111213;
-    --secondary: #ededed;
-  }
+  --primary: black;
+  --secondary: #ededed;
 }
 
 @theme {
@@ -52,6 +45,10 @@
 b,
 strong {
   color: #fb2c36;
+}
+
+h2 {
+  @apply w-max font-mono text-6xl lg:text-7xl uppercase mx-auto scale-y-[1.2]
 }
 
 *,

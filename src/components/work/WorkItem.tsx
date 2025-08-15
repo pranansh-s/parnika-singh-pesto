@@ -47,6 +47,7 @@ const WorkItem: React.FC<IWorkItemProps> = ({ name, descrp, experience }) => {
                 loading="lazy"
               />
             ))}
+            {exp.name && <Label initial={{ opacity: 0.4 }} whileInView={{ opacity: 0.8 }} transition={{ delay: 0.3 }}>{exp.name}</Label>}
           </ExperiencePosters>
         ))}
       </PosterContainer>
@@ -57,6 +58,7 @@ const WorkItem: React.FC<IWorkItemProps> = ({ name, descrp, experience }) => {
 export default WorkItem;
 
 const WorkItemContainer = tw(motion.div)`
+  relative
   gap-y-lg
   grid
   font-sans
@@ -80,23 +82,39 @@ const WorkHeading = tw.h3`
 `;
 
 const Divider = tw.hr`
-  absolute
-  left-0
+  col-span-full
+  -mx-lg
   w-screen
 `;
+
+const Label = tw(motion.span)`
+  xl:hidden
+  block
+  absolute
+  w-full
+  bottom-8
+  text-primary
+  font-sans
+  text-lg
+  font-bold
+  bg-secondary
+  py-6
+  px-3
+`
 
 const PosterContainer = tw.div`
   col-span-full
   grid
   h-full
   grid-cols-subgrid
-  gap-0
+  gap-2
   overflow-clip
   xl:col-start-2
 `;
 
 const ExperiencePosters = tw.div`
   flex
+  relative
 `;
 
 const Poster = tw(Image)`

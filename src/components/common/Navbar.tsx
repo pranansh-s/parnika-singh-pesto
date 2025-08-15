@@ -8,7 +8,7 @@ import tw from 'tailwind-styled-components';
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <NameTag>Parnika</NameTag>
+      <h2 className='font-black !text-4xl md:!text-6xl lg:!text-7xl'>Parnika</h2>
       <NavItemContainer>
         {NAV_LINKS.map((link, idx) => (
           <NavItem href={link.path} key={idx}>
@@ -59,13 +59,4 @@ const NavItem = tw(Link)`
   transition-colors
   hover:text-blue-500
   md:text-base
-`;
-
-const NameTag = tw.h2`
-  cursor-pointer
-  font-sans
-  text-3xl
-  font-black
-  uppercase
-  md:text-5xl
 `;

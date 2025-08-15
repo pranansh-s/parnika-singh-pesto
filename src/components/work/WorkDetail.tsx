@@ -11,7 +11,7 @@ type IWorkDetailBlockProp = {
 const WorkDetailBlock: React.FC<IWorkDetailBlockProp> = ({ name, content, className }) => {
   return (
     <p className={className}>
-      <Title>{name}</Title> {content}
+      <Title>{name}</Title>&nbsp;{content}
     </p>
   );
 };
@@ -21,16 +21,16 @@ const WorkDetail: React.FC<IWorkDetailProps> = ({ id, about, industry, metrics, 
     <WorkDetailContainer>
       <WorkDetailBlock name={id.replaceAll('-', ' ')} content={about} />
       {industry && <WorkDetailBlock name="Industry" content={industry.join(', ')} />}
-      {metrics && <WorkDetailBlock name="Metrics" content={metrics.join(' | ')} />}
+      {role && <WorkDetailBlock className="row-start-2 lg:row-auto" name="Roles" content={role.join(', ')} />}
       {content && (
-        <ul className="col-span-2 max-w-[750px]">
+        <ul className="col-span-2 list-inside list-disc">
           <Title>Achievements</Title>
           {content.map((statement, idx) => (
             <li key={idx}>{statement}</li>
           ))}
         </ul>
       )}
-      {role && <WorkDetailBlock className="row-start-2 lg:row-auto" name="Roles" content={role.join(', ')} />}
+      {metrics && <WorkDetailBlock name="Metrics" content={metrics.join(' | ')} />}
     </WorkDetailContainer>
   );
 };
@@ -38,7 +38,8 @@ const WorkDetail: React.FC<IWorkDetailProps> = ({ id, about, industry, metrics, 
 export default WorkDetail;
 
 const Title = tw.sup`
-  text-base
+  text-xs
+  font-bold
   text-blue-400
   uppercase
 `;
@@ -46,8 +47,9 @@ const Title = tw.sup`
 const WorkDetailContainer = tw.div`
   grid
   grid-cols-2
-  gap-12
-  text-base
-  lg:gap-24
+  gap-10
+  font-sans
+  text-sm
+  lg:gap-16
   xl:grid-cols-3
 `;

@@ -12,11 +12,11 @@ const Details = () => {
     <DetailsContainer>
       <Image width={400} height={400} src={me} alt="parnika-singh" />
       <Content>
-        <Title>Pesto</Title>
-        aka <b>Parnika</b>, is a brand strategist, creative tinkerer and copywriter based out of Bombay with over 8
-        years of experience in advertising & marketing across fashion, lifestyle and crypto brands.
+        <Title>about me</Title>
+        Pesto aka <b>Parnika</b>, is a brand strategist, creative tinkerer and copywriter based out of Bombay with over
+        8 years of experience in advertising & marketing across fashion, lifestyle and crypto brands.
       </Content>
-      <Trinket image={'/trinkets/trinket-12.png'} rotate={-20} size={0.45} defaultTop={20} defaultLeft={5} />
+      <Trinket image={'/trinkets/trinket-12.png'} rotate={-20} size={0.35} defaultTop={5} defaultLeft={5} />
     </DetailsContainer>
   );
 };
@@ -26,32 +26,33 @@ export default Details;
 const DetailsContainer = tw.div`
   relative
   flex
-  w-[95vw]
+  w-[90vw]
   max-w-[1000px]
   flex-col
   items-center
-  justify-center
   gap-0
+  font-sans
   lg:flex-row
   lg:gap-10
   xl:gap-24
 `;
 
 const Content = tw.div`
+  text-secondary/80
   text-center
   text-xl
   leading-8
-  text-white/80
   lg:text-left
-  lg:text-3xl
-  lg:leading-16
+  lg:text-2xl
+  lg:leading-12
 `;
 
-const Title = tw.h3`
-  text-5xl
-  leading-[7rem]
-  text-white
+const Title = tw.h2`
+  text-secondary
+  font-mono
+  text-6xl
+  leading-[9rem]
   font-black
   lowercase
-  lg:text-6xl
+  lg:text-7xl
 `;

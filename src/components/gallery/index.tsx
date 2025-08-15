@@ -14,7 +14,7 @@ const Gallery: React.FC<IGalleryProps> = ({ paths }) => {
     <GalleryContainer className="gallery">
       {paths.map((display, idx) =>
         display.startsWith('/') ? (
-          <Image width={750} height={750} key={idx} src={display} alt={`${display}-${idx}`} />
+          <StyledImage width={750} height={750} key={idx} src={display} alt={`${display}-${idx}`} />
         ) : (
           <Tweet key={idx} id={display} />
         )
@@ -31,4 +31,9 @@ const GalleryContainer = tw.div`
   overflow-clip
   md:columns-2
   lg:columns-3
+`;
+
+const StyledImage = tw(Image)`
+  rounded-3xl
+  py-2
 `;

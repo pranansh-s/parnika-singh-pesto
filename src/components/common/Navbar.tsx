@@ -23,11 +23,12 @@ const NavbarContainer = tw.div`
   bg-primary
   fixed
   top-0
-  left-0
+  left-1/2
   z-50
   flex
   w-full
   max-w-[2400px]
+  -translate-x-1/2
   justify-between
   gap-6
   md:gap-48
@@ -44,6 +45,7 @@ const NavItemContainer = tw.ul`
 const NavItem = tw.li`
   p-md
   cursor-pointer
+  font-sans
   text-sm
   font-semibold
   transition-colors
@@ -53,8 +55,9 @@ const NavItem = tw.li`
 
 const NameTag = tw.h2`
   cursor-pointer
-  text-4xl
-  font-extrabold
+  font-sans
+  text-3xl
+  font-black
   uppercase
-  md:text-6xl
+  md:text-5xl
 `;

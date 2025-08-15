@@ -17,7 +17,7 @@ type ICarouselProps = {
 const HCarousel: React.FC<ICarouselProps> = ({ items, type = 'text', dir = 'left' }) => {
   const { baseX, velocityFactor } = useScrollVelocity();
   const directionFactor = useRef<number>(dir === 'left' ? 1 : -1);
-  const x = useTransform(baseX, v => `${wrap(0, -50 + (type === 'image' ? 10.75 : 0), v)}%`);
+  const x = useTransform(baseX, v => `${wrap(0, -50 + (type === 'image' ? 9.5 : 0), v)}%`);
 
   useAnimationFrame((_, delta) => {
     let moveBy = directionFactor.current * 1.5 * (delta / 1000);
@@ -39,14 +39,14 @@ const HCarousel: React.FC<ICarouselProps> = ({ items, type = 'text', dir = 'left
 
   return (
     <CarouselContainer>
-      <Slider style={{ x, gap: type === 'text' ? 0 : 48 }}>
+      <Slider style={{ x }} $isText={type === 'text'}>
         {items
           .concat(items)
           .concat(items)
           .concat(items)
           .map((tag, idx) =>
             type === 'text' ? (
-              <CarouselItem key={idx}>| {tag} </CarouselItem>
+              <CarouselItem key={idx}>|&nbsp;&nbsp;{tag}&nbsp;&nbsp;</CarouselItem>
             ) : (
               <CarouselImage width={100} height={100} key={idx} src={tag} alt={`tool-${idx}`} />
             )
@@ -60,27 +60,32 @@ export default HCarousel;
 
 const CarouselContainer = tw.div`
   relative
-  h-20
-  w-[2400px]
+  w-screen
+  max-w-[2400px]
   overflow-x-clip
 `;
 
-const Slider = tw(motion.div)`
+const Slider = tw(motion.div)<{ $isText: boolean }>`
   flex
   absolute
+  ${({ $isText }) => ($isText ? 'gap-0 bg-secondary' : 'md:gap-[48px] gap-[10px]')}
   items-center
   will-change-transform
 `;
 
 const CarouselItem = tw.pre`
-  text-4xl
-  font-black
+  text-primary
+  py-3
+  font-sans
+  text-3xl
+  font-semibold
   uppercase
-  lg:text-6xl
+  lg:text-4xl
 `;
 
 const CarouselImage = tw(Image)`
   w-full
-  h-[80px]
+  md:h-[100px]
+  h-[75px]
   mx-14
 `;

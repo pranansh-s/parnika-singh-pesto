@@ -8,12 +8,12 @@ export const WORK_ITEMS: WorkBlock[] = [
       {
         name: 'Huddle01',
         link: 'huddle01',
-        posters: ['/posters/brand-strategy/huddle01/image-11.webp', '/posters/brand-strategy/huddle01/image-10.webp'],
+        posters: ['/posters/brand-strategy/huddle01/image.jpeg'],
       },
       {
         name: 'FIL Bangalore',
         link: 'fil-bangalore',
-        posters: ['/posters/brand-strategy/fil-bangalore/image-7.webp'],
+        posters: ['/posters/brand-strategy/fil-bangalore/image.webp'],
       },
       { name: 'Den', link: 'den', posters: ['/posters/brand-strategy/den/image-2.webp'] },
     ],
@@ -25,31 +25,22 @@ export const WORK_ITEMS: WorkBlock[] = [
       {
         name: 'HUDL Testnet: Nexus',
         link: 'hudl-nexus',
-        posters: [
-          '/posters/campaign-strategy/hudl-testnet-nexus/image-1.webp',
-          '/posters/campaign-strategy/hudl-testnet-nexus/image-11.webp',
-        ],
+        posters: ['/posters/campaign-strategy/hudl-testnet-nexus/image.jpeg'],
       },
       {
         name: 'HUDL Node Sales Phase 1',
         link: 'hudl-node-sales',
-        posters: [
-          '/posters/campaign-strategy/hudl-node-sales/image-15.webp',
-          '/posters/campaign-strategy/hudl-node-sales/image-7.webp',
-        ],
+        posters: ['/posters/campaign-strategy/hudl-node-sales/image.jpeg'],
       },
       {
         name: 'Battle of Open Realm',
         link: 'battle-of-open-realm',
-        posters: ['/posters/campaign-strategy/battle-of-open-realm/image-2.webp'],
+        posters: ['/posters/campaign-strategy/battle-of-open-realm/image-14.webp'],
       },
       {
         name: 'Huddle01 Meet Features',
         link: 'huddle-meet-features',
-        posters: [
-          '/posters/campaign-strategy/huddle-meet/image-5.webp',
-          '/posters/campaign-strategy/huddle-meet/image-10.webp',
-        ],
+        posters: ['/posters/campaign-strategy/huddle-meet/image.jpeg'],
       },
     ],
   },
@@ -60,7 +51,7 @@ export const WORK_ITEMS: WorkBlock[] = [
       { link: 'social-media', posters: ['/posters/social-media/image-1.webp'] },
       {
         link: 'social-media',
-        posters: ['/posters/social-media/image-5.webp', '/posters/social-media/image-8.webp'],
+        posters: ['/posters/social-media/image-24.jpeg'],
       },
       { link: 'social-media', posters: ['/posters/social-media/image-15.webp'] },
     ],
@@ -69,11 +60,11 @@ export const WORK_ITEMS: WorkBlock[] = [
     name: 'Long Form',
     descrp: 'Detailed blogs, threads and guides',
     experience: [
-      { link: 'long-form', posters: ['/posters/long-form/image-3.png', '/posters/long-form/image-1.png'] },
-      { link: 'long-form', posters: ['/posters/long-form/image-4.webp'] },
+      { link: 'long-form', posters: ['/posters/long-form/image-1.jpeg'] },
+      { link: 'long-form', posters: ['/posters/long-form/image-3.jpeg'] },
       {
         link: 'long-form',
-        posters: ['/posters/long-form/image-2.webp'],
+        posters: ['/posters/long-form/image-5.jpeg'],
       },
     ],
   },

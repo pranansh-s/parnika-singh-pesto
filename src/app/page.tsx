@@ -1,10 +1,10 @@
-import { TOOLS } from '@/constants';
 import tw from 'tailwind-styled-components';
 
 import About from '@/components/about';
 import Banner from '@/components/banner';
-import HCarousel from '@/components/common/HCarousel';
 import Contact from '@/components/contact';
+import InstagramCarousel from '@/components/instagram';
+import Tools from '@/components/tools';
 import Work from '@/components/work';
 
 export default function HomePage() {
@@ -13,8 +13,9 @@ export default function HomePage() {
       <Banner />
       <About />
       <Work />
-      <HCarousel type="image" items={TOOLS} />
+      <Tools />
       <Contact />
+      <InstagramCarousel />
     </HomeContainer>
   );
 }
@@ -27,5 +28,3 @@ const HomeContainer = tw.div`
   items-center
   gap-36
 `;
-
-// INSTA_FEED

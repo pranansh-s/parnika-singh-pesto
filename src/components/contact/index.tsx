@@ -12,7 +12,7 @@ import useScrollVelocity from '@/hooks/useScrollVelocity';
 
 import abstract from '@/../public/abstract.webp';
 import mail from '@/../public/icons/email.svg';
-import insta from '@/../public/icons/instagram.svg';
+import telegram from '@/../public/icons/telegram.svg';
 import x from '@/../public/icons/x.svg';
 import mailbox from '@/../public/mailbox.webp';
 import papers from '@/../public/papers.webp';
@@ -26,11 +26,9 @@ type IContactFieldProps = {
 
 const ContactField: React.FC<IContactFieldProps> = ({ icon, link, text, className }) => {
   return (
-    <ContactFieldContainer className={className}>
-      <Image width={30} height={30} src={icon} alt={text} />
-      <Link target="_blank" className="hover:opacity-60" href={link}>
-        {text}
-      </Link>
+    <ContactFieldContainer href={link} target="_blank" className={className}>
+      <Image width={30} height={30} className="scale-[0.9] md:scale-100" src={icon} alt={text} />
+      <StyledLink>{text}</StyledLink>
     </ContactFieldContainer>
   );
 };
@@ -68,23 +66,13 @@ const Contact = () => {
         />
       </GraphicContainer>
       <Connect>
-        <ConnectTitle>Let&apos;s Connect</ConnectTitle>
+        <ConnectTitle>Hire Me</ConnectTitle>
+        <ConnectSubTitle>Let's Connect</ConnectSubTitle>
         <BackgroundImage src={papers} alt="papers" />
         <ContactFields>
+          <ContactField text="parnikasingh12@gmail.com" link="mailto:parnikasingh12@gmail.com" icon={mail} />
+          <ContactField text="@parnika97" link="" icon={telegram} />
           <ContactField
-            className="col-span-2"
-            text="parnikasingh12@gmail.com"
-            link="mailto:parnikasingh12@gmail.com"
-            icon={mail}
-          />
-          <ContactField
-            className="col-span-2 md:col-span-1"
-            text="@pestomesto"
-            link="https://www.instagram.com/pestomessto?igsh=OTh1MW5nYzYwOGU="
-            icon={insta}
-          />
-          <ContactField
-            className="col-span-2 md:col-span-1 md:-ml-24"
             text="@pesto_panini_"
             link="https://x.com/pesto_panini_?t=WbAgp57PwCsSexn-c0u8Nw&s=09"
             icon={x}
@@ -99,13 +87,17 @@ export default Contact;
 
 const ContactContainer = tw.section`
   grid
-  h-[85vh]
-  w-[95vw]
+  h-screen
   max-w-[1000px]
   grid-cols-1
   place-items-center
   pb-24
   md:grid-cols-2
+`;
+
+const StyledLink = tw.span`
+  group-hover:text-blue-500
+  group-hover:underline
 `;
 
 const GraphicContainer = tw.div`
@@ -114,37 +106,56 @@ const GraphicContainer = tw.div`
   md:block
 `;
 
-const ConnectTitle = tw.h3`
+const ConnectTitle = tw.h2`
   text-center
+  font-mono
   text-6xl
   font-bold
   uppercase
   md:text-left
-  lg:text-8xl
+  md:text-7xl
 `;
 
-const ContactFieldContainer = tw.div`
+const ConnectSubTitle = tw(ConnectTitle)`
+  md:text-3xl
+  font-sans
+  md:mb-5
+  mb-10
+  capitalize
+  text-secondary/80
+  italic
+  text-2xl
+`;
+
+const ContactFieldContainer = tw(Link)`
+  group
   flex
+  w-max
+  md:text-lg
+  text-xl
   items-center
   gap-5
 `;
 
 const ContactFields = tw.div`
-  grid
-  grid-cols-2
-  place-items-center
-  gap-10
-  text-2xl
+  flex
+  flex-col
+  flex-nowrap
+  items-center
+  gap-12
+  text-xl
   font-bold
-  underline
-  md:place-items-start
+  md:flex-row
+  md:flex-wrap
+  md:items-start
+  md:gap-6
 `;
 
 const Connect = tw.div`
   relative
   flex
   flex-col
-  gap-12
+  gap-10
 `;
 
 const BackgroundImage = tw(Image)`
@@ -158,7 +169,7 @@ const BackgroundImage = tw(Image)`
   -z-10
 `;
 
-const RotatingImage = tw(motion(Image))`
+const RotatingImage = tw(motion.create(Image))`
   aspect-square
   absolute
   top-10

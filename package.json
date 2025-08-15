@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "motion": "^12.23.12",
-    "next": "15.4.5",
+    "next": "^15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-social-media-embed": "^2.5.18",
     "react-tweet": "^3.2.2",
     "sharp": "^0.34.3"
   },

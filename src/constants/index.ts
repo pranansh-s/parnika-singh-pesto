@@ -7,13 +7,11 @@ export const NAV_LINKS: NavLink[] = [
   { name: 'Contact', path: '#contact' },
 ];
 
-export const TOOLS: string[] = [
-  '/tools/kaito.webp',
-  '/tools/analytics.webp',
-  '/tools/plausible.webp',
-  '/tools/safari.webp',
-  '/tools/midjourney.webp',
-  '/tools/canva.webp',
-  '/tools/procreate.webp',
-  '/tools/figma.webp',
+export const INSTAGRAM_EMBEDS: string[] = [
+  'https://www.instagram.com/p/DMvRrq2NVgf/',
+  'https://www.instagram.com/p/DMlBwKmNOnh/',
+  'https://www.instagram.com/p/DMilOVbiANt/',
+  'https://www.instagram.com/p/DMc_KlSNt3Z/',
+  'https://www.instagram.com/p/DMaafywNMoE/',
+  'https://www.instagram.com/p/DMX0oyQtAZ-/',
 ];

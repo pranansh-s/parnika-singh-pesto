@@ -2,12 +2,21 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 
+import { Montserrat, Playfair_Display } from 'next/font/google';
+
 import Navbar from '@/components/common/Navbar';
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const montserrat = Montserrat({
+  variable: '--font-sans',
+  display: 'swap',
+  subsets: ['latin'],
+});
+
+const playfair = Playfair_Display({
+  variable: '--font-mono',
+  display: 'swap',
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Parnika Singh',
@@ -21,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="lg:p-lg p-md flex w-full flex-col items-center overflow-x-clip antialiased">
+      <body
+        className={`${montserrat.variable} ${playfair.variable} lg:p-lg p-md flex w-full flex-col items-center overflow-x-clip antialiased`}
+      >
         <Navbar />
         {children}
       </body>

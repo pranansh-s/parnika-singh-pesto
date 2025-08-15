@@ -12,7 +12,10 @@ const Banner = () => {
           <Trinket key={idx} {...trinket} />
         ))}
       </TrinketsContainer>
-      <BannerHeading>Pesto&apos;s Paradise</BannerHeading>
+      <BannerHeading>
+        Pesto&apos;s <br />
+        Pandora
+      </BannerHeading>
     </BannerContainer>
   );
 };
@@ -37,7 +40,9 @@ const BannerHeading = tw.h1`
   -translate-x-1/2
   -translate-y-1/2
   text-center
+  font-mono
   text-6xl
+  tracking-tighter
   sm:text-8xl
   md:w-max
 `;

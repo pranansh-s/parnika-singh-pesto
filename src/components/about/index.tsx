@@ -10,7 +10,7 @@ const About = () => {
     <AboutContainer>
       <HCarousel items={JOB_TAGS} />
       <Details />
-      <HCarousel items={WORK_TAGS} dir="right" />
+      <HCarousel items={WORK_TAGS} type="image" dir="right" />
     </AboutContainer>
   );
 };
@@ -18,8 +18,9 @@ const About = () => {
 export default About;
 
 const AboutContainer = tw.section`
+  mb-36
   flex
   flex-col
   items-center
-  space-y-16
+  space-y-32
 `;

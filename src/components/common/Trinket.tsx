@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 
 import { TrinketItem } from '@/types';
@@ -39,7 +39,7 @@ const StyledTrinketImage = tw(motion.create(Image))<{ $isDragging: boolean }>`
   touch-none
   cursor-grab
   will-change-transform
-  ${({ $isDragging }) => ($isDragging ? 'cursor-grabbing' : 'cursor-grab')}
+  ${({ $isDragging }) => ($isDragging ? 'cursor-grabbing z-[100]' : 'cursor-grab')}
   -translate-x-1/2
   -translate-y-1/2
 `;

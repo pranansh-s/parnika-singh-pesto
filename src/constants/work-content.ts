@@ -94,7 +94,7 @@ export const WORK_PAGES: WorkContent[] = [
     industry: ['Streaming'],
     role: ['Creative Direction'],
     content: [
-      'Built the brand moodboard, tone of voice, vision statement, user persona and worked with a designer to bring it to life.',
+      'Built the brand moodboard, visual and verbal tone, vision statement, user personas and worked with a designer, Ragy to bring it to life.',
     ],
     display: [
       '/posters/brand-strategy/den/image.webp',
@@ -109,7 +109,7 @@ export const WORK_PAGES: WorkContent[] = [
     id: 'hudl-nexus',
     about:
       "Huddle01's official gamified testnet with a multi arena quest board featuring points and tasks across apps, content creation, games, and socials.",
-    metrics: ['174,552 Users', '2.95M Transactions', '200K+ Community Members'],
+    metrics: ['174K+ Users', '2.95M Transactions', '200K+ Community Members'],
     role: ['Campaign Strategy', 'Social Media'],
     content: [
       'Worked with the team on quest board design, KOL shortlisting and briefing, creator tasks, partner badges, weekly leaderboards, point structure and rewards.',
@@ -272,6 +272,7 @@ export const WORK_PAGES: WorkContent[] = [
       '1919143131414507788',
       '/posters/social-media/image-22.webp',
       '/posters/social-media/image-23.webp',
+      '/posters/social-media/image-24.webp',
       '1757691478267371657',
     ],
   },
@@ -279,6 +280,7 @@ export const WORK_PAGES: WorkContent[] = [
     id: 'long-form',
     about: 'Detailed blogs, threads and guides',
     display: [
+      '/posters/long-form/image-5.webp',
       '/posters/long-form/image.webp',
       '1913159352371781942',
       '/posters/long-form/image-3.webp',

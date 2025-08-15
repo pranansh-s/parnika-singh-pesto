@@ -18,15 +18,19 @@ const WorkItem: React.FC<IWorkItemProps> = ({ name, descrp, experience }) => {
       initial={{ y: 100 }}
       whileInView={{ y: 0 }}
       viewport={{ once: true }}
+      className="work-item"
       style={{ gridTemplateColumns: `20vw repeat(${experience.length}, minmax(0, 1fr))` }}
     >
       <Header>
         <WorkHeading>{name} /</WorkHeading>
-        {experience.map((exp, idx) => (
-          <Experience href={exp.link} key={idx}>
-            {exp.name}
-          </Experience>
-        ))}
+        {experience.map(
+          (exp, idx) =>
+            exp.name && (
+              <Experience href={exp.link} key={idx}>
+                {exp.name}
+              </Experience>
+            )
+        )}
         <Divider />
       </Header>
       <AboutText>{descrp}</AboutText>
@@ -55,6 +59,7 @@ export default WorkItem;
 const WorkItemContainer = tw(motion.div)`
   gap-y-lg
   grid
+  font-sans
 `;
 
 const Header = tw.header`
@@ -69,7 +74,9 @@ const WorkHeading = tw.h3`
   text-2xl
   font-bold
   tracking-[0.5rem]
+  text-nowrap
   uppercase
+  xl:text-wrap
 `;
 
 const Divider = tw.hr`
@@ -80,42 +87,48 @@ const Divider = tw.hr`
 
 const PosterContainer = tw.div`
   col-span-full
-  col-start-2
   grid
-  h-[500px]
+  h-full
   grid-cols-subgrid
   gap-0
   overflow-clip
+  xl:col-start-2
 `;
 
 const ExperiencePosters = tw.div`
-  grid
+  flex
+  flex-wrap
 `;
 
 const Poster = tw(Image)`
   cursor-pointer
-  h-full
   w-full
   object-cover
-  aspect-video
   transition-opacity
   hover:opacity-80
 `;
 
 const AboutText = tw.p`
+  text-secondary/80
+  mb-10
+  w-screen
   pr-6
   text-left
   text-xl
-  text-white/80
+  xl:mb-0
+  xl:w-full
 `;
 
 const Experience = tw(Link)`
   p-sm
   w-max
   cursor-pointer
-  text-xl
+  2xl:text-lg
+  text-base
   font-bold
   uppercase
   transition-colors
   hover:text-blue-400
+  xl:block
+  hidden
 `;

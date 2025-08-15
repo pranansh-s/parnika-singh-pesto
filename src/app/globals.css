@@ -1,28 +1,57 @@
 @import 'tailwindcss';
 
+:root {
+  --primary: #ffffff;
+  --secondary: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #111213;
+    --secondary: #ededed;
+  }
+}
+
 @theme {
-  --color-primary: #ffffff;
-  --color-secondary: #171717;
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
 
   --spacing-lg: 15px;
   --spacing-md: 10px;
   --spacing-sm: 5px;
 }
 
-@media (prefers-color-scheme: dark) {
-  @theme {
-    --color-primary: #111213;
-    --color-secondary: #ededed;
-  }
-}
-
 .react-tweet-theme {
   max-width: none !important;
 }
 
+@media (max-width: 80rem) {
+  .work-item {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 64rem) {
+  .work-item {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 32rem) {
+  .work-item {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
+*:focus,
+*:active {
+  outline: 0;
+  border: 0;
+}
+
 b,
 strong {
-  color: #51a2ff;
+  color: #fb2c36;
 }
 
 *,
@@ -32,7 +61,12 @@ body {
   scroll-behavior: smooth;
 }
 
+html {
+  margin: 0;
+  font-size: 12px;
+}
+
 body {
-  background: var(--color-primary);
-  color: var(--color-secondary);
+  background: var(--primary);
+  color: var(--secondary);
 }

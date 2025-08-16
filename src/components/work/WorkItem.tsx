@@ -47,7 +47,11 @@ const WorkItem: React.FC<IWorkItemProps> = ({ name, descrp, experience }) => {
                 loading="lazy"
               />
             ))}
-            {exp.name && <Label initial={{ opacity: 0.4 }} whileInView={{ opacity: 0.8 }} transition={{ delay: 0.3 }}>{exp.name}</Label>}
+            {exp.name && (
+              <Label initial={{ opacity: 0.4 }} whileInView={{ opacity: 0.8 }} transition={{ delay: 0.3 }}>
+                {exp.name}
+              </Label>
+            )}
           </ExperiencePosters>
         ))}
       </PosterContainer>
@@ -73,17 +77,17 @@ const Header = tw.header`
 
 const WorkHeading = tw.h3`
   py-sm
-  xl:col-span-1
   col-span-full
   text-2xl
   font-bold
   tracking-[0.5rem]
   uppercase
+  xl:col-span-1
 `;
 
 const Divider = tw.hr`
-  col-span-full
   -mx-lg
+  col-span-full
   w-screen
 `;
 
@@ -100,7 +104,7 @@ const Label = tw(motion.span)`
   bg-secondary
   py-6
   px-3
-`
+`;
 
 const PosterContainer = tw.div`
   col-span-full
@@ -113,8 +117,8 @@ const PosterContainer = tw.div`
 `;
 
 const ExperiencePosters = tw.div`
-  flex
   relative
+  flex
 `;
 
 const Poster = tw(Image)`
@@ -127,13 +131,13 @@ const Poster = tw(Image)`
 
 const AboutText = tw.p`
   text-secondary/80
-  xl:col-span-1
   col-span-full
   mb-10
   pr-6
   text-left
   text-lg
   lg:text-xl
+  xl:col-span-1
   xl:mb-0
 `;
 

@@ -23,6 +23,6 @@ const AboutContainer = tw.section`
   w-full
   flex-col
   items-center
-  lg:gap-32
   gap-24
+  lg:gap-32
 `;

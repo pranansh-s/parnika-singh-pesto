@@ -18,7 +18,7 @@ export default Work;
 
 const WorkContainer = tw.section`
   flex
+  max-w-[2400px]
   flex-col
   gap-[10rem]
-  max-w-[2400px]
 `;

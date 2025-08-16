@@ -66,7 +66,7 @@ const Contact = () => {
         />
       </GraphicContainer>
       <Connect>
-        <h2 className='md:!ml-0'>Hire Me</h2>
+        <h2 className="md:!ml-0">Hire Me</h2>
         <ConnectSubTitle>Let&apos;s Connect</ConnectSubTitle>
         <BackgroundImage src={papers} alt="papers" />
         <ContactFields>
@@ -87,20 +87,22 @@ export default Contact;
 
 const ContactContainer = tw.section`
   grid
-  max-h-screen
-  md:h-[500px]
   h-[400px]
+  max-h-screen
   max-w-[1000px]
   grid-cols-1
   place-items-center
-  pb-12
+  lg:my-24
+  my-16
+  md:h-[500px]
   md:grid-cols-2
 `;
 
 const StyledLink = tw.span`
+  text-2xl
+  font-sans
   group-hover:text-blue-500
   group-hover:underline
-  text-2xl
 `;
 
 const GraphicContainer = tw.div`
@@ -110,19 +112,19 @@ const GraphicContainer = tw.div`
 `;
 
 const ConnectSubTitle = tw.h2`
-  md:!text-3xl
-  md:!ml-0
-  !font-sans
-  md:mb-5
+  text-secondary/80
   mb-10
   !scale-100
-  md:text-left
   text-center
-  capitalize
-  text-secondary/80
-  italic
-  font-bold
+  !font-sans
   !text-2xl
+  font-bold
+  capitalize
+  italic
+  md:mb-5
+  md:!ml-0
+  md:text-left
+  md:!text-3xl
 `;
 
 const ContactFieldContainer = tw(Link)`

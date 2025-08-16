@@ -12,7 +12,7 @@ const Details = () => {
     <DetailsContainer>
       <Image width={400} height={400} src={me} alt="parnika-singh" />
       <Content>
-        <h2 className='lg:!ml-0 !lowercase text-secondary leading-[8rem]'>about me</h2>
+        <h2 className="text-secondary leading-[8rem] !lowercase lg:!ml-0">about me</h2>
         Pesto aka <b>Parnika</b>, is a brand strategist, creative tinkerer and copywriter based out of Bombay with over
         8 years of experience in advertising & marketing across fashion, lifestyle and crypto brands.
       </Content>

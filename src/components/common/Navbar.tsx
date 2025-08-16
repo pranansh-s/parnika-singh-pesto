@@ -8,7 +8,7 @@ import tw from 'tailwind-styled-components';
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <h2 className='font-black !text-4xl md:!text-6xl lg:!text-7xl'>Parnika</h2>
+      <NameTag>Parnika</NameTag>
       <NavItemContainer>
         {NAV_LINKS.map((link, idx) => (
           <NavItem href={link.path} key={idx}>
@@ -21,6 +21,14 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+const NameTag = tw.h1`
+  lg:text-6xl
+  font-sans
+  font-black
+  uppercase
+  text-4xl
+`;
 
 const NavbarContainer = tw.div`
   lg:px-lg

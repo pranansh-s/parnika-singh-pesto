@@ -40,24 +40,24 @@ const InstagramCarousel = () => {
 
   return (
     <CarouselContainer ref={carouselRef}>
-      <h2 className='mx-auto'>Playground</h2>
-      <Slider
-        animate={{ x: -currentIndex * (carouselRef.current ? carouselRef.current.offsetWidth : 0) }}
-        transition={{ duration: 0.7 }}
-      >
-        {INSTAGRAM_EMBEDS.map((postUrl, idx) => (
-          <Embed
-            style={{ width: (carouselRef.current ? carouselRef.current.offsetWidth : 0) / itemsPerView }}
-            key={idx}
-            url={postUrl}
-          />
-        ))}
-        <ViewMore href="https://www.instagram.com/pestomessto" target="_blank">
-          <span style={{ writingMode: 'vertical-rl' }} className="mr-16 text-shadow-lg md:mr-24">
-            show more
-          </span>
-        </ViewMore>
-      </Slider>
+      <h2 className="mx-auto">Playground</h2>
+      {carouselRef.current && (
+        <Slider animate={{ x: -currentIndex * carouselRef.current.offsetWidth }} transition={{ duration: 0.7 }}>
+          {INSTAGRAM_EMBEDS.map((postUrl, idx) => (
+            <Embed
+              style={{ width: carouselRef.current!.offsetWidth / itemsPerView }}
+              key={idx}
+              width={350}
+              url={postUrl}
+            />
+          ))}
+          <ViewMore href="https://www.instagram.com/pestomessto" target="_blank">
+            <span style={{ writingMode: 'vertical-rl' }} className="mr-16 text-shadow-lg md:mr-24">
+              show more
+            </span>
+          </ViewMore>
+        </Slider>
+      )}
       <Controls>
         <NavButton onClick={prevSlide}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black">
@@ -80,8 +80,8 @@ const CarouselContainer = tw.div`
   relative
   w-screen
   max-w-[2400px]
-  overflow-clip
   space-y-12
+  overflow-clip
   md:w-full
 `;
 

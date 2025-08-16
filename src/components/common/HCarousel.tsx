@@ -78,9 +78,9 @@ const CarouselItem = tw.pre`
   py-3
   font-sans
   text-2xl
-  md:text-3xl
   font-semibold
   uppercase
+  md:text-3xl
   lg:text-4xl
 `;
 

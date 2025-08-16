@@ -25,6 +25,6 @@ const HomeContainer = tw.div`
   w-full
   flex-col
   items-center
-  lg:gap-36
   gap-24
+  lg:gap-36
 `;

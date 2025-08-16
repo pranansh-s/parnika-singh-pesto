@@ -23,14 +23,14 @@ const Banner = () => {
 export default Banner;
 
 const BannerContainer = tw.section`
-  max-h-screen
+  relative
   h-[500px]
+  max-h-screen
+  w-full
+  max-w-[2400px]
   sm:h-[750px]
   md:h-[1024px]
   lg:h-[750px]
-  max-w-[2400px]
-  relative
-  w-full
 `;
 
 const TrinketsContainer = tw.div`

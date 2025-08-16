@@ -8,7 +8,7 @@ export const WORK_ITEMS: WorkBlock[] = [
       {
         name: 'Huddle01',
         link: 'huddle01',
-        posters: ['/posters/brand-strategy/huddle01/image.jpeg'],
+        posters: ['/posters/brand-strategy/huddle01/image-21.webp'],
       },
       {
         name: 'FIL Bangalore',
@@ -25,12 +25,12 @@ export const WORK_ITEMS: WorkBlock[] = [
       {
         name: 'HUDL Testnet: Nexus',
         link: 'hudl-nexus',
-        posters: ['/posters/campaign-strategy/hudl-testnet-nexus/image.jpeg'],
+        posters: ['/posters/campaign-strategy/hudl-testnet-nexus/image-20.webp'],
       },
       {
         name: 'HUDL Node Sales Phase 1',
         link: 'hudl-node-sales',
-        posters: ['/posters/campaign-strategy/hudl-node-sales/image.jpeg'],
+        posters: ['/posters/campaign-strategy/hudl-node-sales/image-21.webp'],
       },
       {
         name: 'Battle of Open Realm',
@@ -40,7 +40,7 @@ export const WORK_ITEMS: WorkBlock[] = [
       {
         name: 'Huddle01 Meet Features',
         link: 'huddle-meet-features',
-        posters: ['/posters/campaign-strategy/huddle-meet/image.jpeg'],
+        posters: ['/posters/campaign-strategy/huddle-meet/image-14.webp'],
       },
     ],
   },
@@ -51,7 +51,7 @@ export const WORK_ITEMS: WorkBlock[] = [
       { link: 'social-media', posters: ['/posters/social-media/image-1.webp'] },
       {
         link: 'social-media',
-        posters: ['/posters/social-media/image-24.jpeg'],
+        posters: ['/posters/social-media/image-12.webp'],
       },
       { link: 'social-media', posters: ['/posters/social-media/image-15.webp'] },
     ],
@@ -60,11 +60,11 @@ export const WORK_ITEMS: WorkBlock[] = [
     name: 'Long Form',
     descrp: 'Detailed blogs, threads and guides',
     experience: [
-      { link: 'long-form', posters: ['/posters/long-form/image-1.jpeg'] },
-      { link: 'long-form', posters: ['/posters/long-form/image-3.jpeg'] },
+      { link: 'long-form', posters: ['/posters/long-form/image-1.webp'] },
+      { link: 'long-form', posters: ['/posters/long-form/image-3.webp'] },
       {
         link: 'long-form',
-        posters: ['/posters/long-form/image-5.jpeg'],
+        posters: ['/posters/long-form/image-5.webp'],
       },
     ],
   },

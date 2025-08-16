@@ -28,6 +28,7 @@ export default async function WorkPage(props: { params: WorkPageParams }) {
 }
 
 const WorkPageContainer = tw.div`
+  w-full
   mt-16
   space-y-12
   md:mt-24

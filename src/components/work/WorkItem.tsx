@@ -108,6 +108,7 @@ const Label = tw(motion.span)`
 
 const PosterContainer = tw.div`
   col-span-full
+
   grid
   h-full
   grid-cols-subgrid
@@ -118,15 +119,17 @@ const PosterContainer = tw.div`
 
 const ExperiencePosters = tw.div`
   relative
+  group
+  h-full
   flex
+  cursor-pointer
 `;
 
 const Poster = tw(Image)`
-  cursor-pointer
   w-full
   object-cover
   transition-opacity
-  hover:opacity-80
+  group-hover:opacity-80
 `;
 
 const AboutText = tw.p`

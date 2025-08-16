@@ -38,7 +38,7 @@ const WorkDetail: React.FC<IWorkDetailProps> = ({ id, about, industry, metrics, 
 export default WorkDetail;
 
 const Title = tw.sup`
-  text-xs
+  text-sm
   font-bold
   text-blue-400
   uppercase
@@ -49,7 +49,7 @@ const WorkDetailContainer = tw.div`
   grid-cols-2
   gap-10
   font-sans
-  text-sm
+  text-base
   lg:gap-16
   xl:grid-cols-3
 `;

@@ -271,7 +271,6 @@ export const WORK_PAGES: WorkContent[] = [
       '1919143131414507788',
       '/posters/social-media/image-22.webp',
       '/posters/social-media/image-23.webp',
-      '/posters/social-media/image-24.webp',
       '1757691478267371657',
     ],
   },

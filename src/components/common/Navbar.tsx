@@ -4,11 +4,14 @@ import Link from 'next/link';
 
 import { NAV_LINKS } from '@/constants';
 import tw from 'tailwind-styled-components';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
+  const router = useRouter();
+
   return (
     <NavbarContainer>
-      <NameTag>Parnika</NameTag>
+      <NameTag onClick={() => router.push('/')}>Parnika</NameTag>
       <NavItemContainer>
         {NAV_LINKS.map((link, idx) => (
           <NavItem href={link.path} key={idx}>
@@ -23,6 +26,7 @@ const Navbar = () => {
 export default Navbar;
 
 const NameTag = tw.h1`
+  cursor-pointer
   lg:text-6xl
   font-sans
   font-black

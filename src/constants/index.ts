@@ -1,10 +1,10 @@
 import { NavLink } from '@/types';
 
 export const NAV_LINKS: NavLink[] = [
-  { name: 'About', path: '#about' },
-  { name: 'Work', path: '#work' },
-  { name: 'Tools', path: '#tools' },
-  { name: 'Contact', path: '#contact' },
+  { name: 'About', path: '/#about' },
+  { name: 'Work', path: '/#work' },
+  { name: 'Tools', path: '/#tools' },
+  { name: 'Contact', path: '/#contact' },
 ];
 
 export const INSTAGRAM_EMBEDS: string[] = [

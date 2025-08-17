@@ -3,7 +3,6 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   images: {
     minimumCacheTTL: 3600,
-    domains: ['pestopanini.xyz'],
   },
   async headers() {
     return [
